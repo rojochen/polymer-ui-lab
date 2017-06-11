@@ -1,0 +1,14 @@
+{
+  "name": "polymer-ui-lab",
+  "main": "index.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0",
+    "bootstrap": "^3.3.7",
+    "select2": "^4.0.3",
+    "jquery": "2.2.4"
+  },
+  "devDependencies": {
+    "web-component-tester": "Polymer/web-component-tester#^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
+  }
+}
