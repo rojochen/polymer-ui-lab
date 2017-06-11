@@ -1,0 +1,6 @@
+{
+  "name": "polymer-ui-lab",
+  "short_name": "polymer-ui-lab",
+  "start_url": "/",
+  "display": "standalone"
+}
