@@ -1,0 +1,66 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../../bower_components/select2/dist/js/select2.full.min.js"></script>
+<link rel="stylesheet" href="../../bower_components/select2/dist/css/select2.min.css">
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="polymer-select2">
+  <template>
+    <style>
+       :host {
+        display: block;
+        width:100%;
+      }
+    </style>
+    <h2>Polymer + Select2</h2>
+    <div>
+    <select id="select2-wrapper-tag" >
+ 
+          
+     </select>
+    </div>
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class PolymerSelect2 extends Polymer.Element {
+      static get is() { return 'polymer-select2'; }
+      constructor() {
+         super();
+        console.log('constructor');
+      }
+      ready() {
+        super.ready();
+        console.log('on ready');
+        var innerDom = this.$["select2-wrapper-tag"];
+        $(innerDom).select2({data:[{id:1,text:'hello'}]});
+        $(document).ready(function(){
+            console.log('dom ready');
+        })
+       
+        //$("#select2-wrapper-tag").select2();
+
+      }
+      
+      static get properties() {
+        return {
+          data: {
+            type: Object,
+          },
+          selectValue: {
+            type: String
+          },
+          autoSearchUrl: {
+            type: String,
+
+          }
+        };
+      }
+    }
+
+    window.customElements.define(PolymerSelect2.is, PolymerSelect2);
+  </script>
+</dom-module>
